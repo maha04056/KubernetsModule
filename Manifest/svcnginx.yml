@@ -4,6 +4,7 @@ metadata:
   name: nginx-svc
   labels:
     app: nginx
+    version: 1.0
 spec:
   type: NodePort
   ports:
@@ -12,3 +13,4 @@ spec:
     protocol: TCP
   selector:
     app: nginx
+    version: 1.0
