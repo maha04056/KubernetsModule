@@ -3,13 +3,13 @@ kind: ReplicationController
 metadata:
   name: nginx-rc
 spec:
-  replicas: 2
+  replicas: 1
   selector:
-    app: nginx1
+    app: nginx
   template:
     metadata:
       labels:
-        app: nginx1
+        app: nginx
     spec:
       containers:
       - name: nginx-pod
