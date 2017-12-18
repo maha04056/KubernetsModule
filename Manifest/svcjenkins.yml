@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: jenkins-svc
   labels:
-    app: jenkins1svc
+    app: jenkins1
 spec:
   type: NodePort 
   ports:
