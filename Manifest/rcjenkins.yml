@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ReplicationController
 metadata:
-  name: jenkins-rc-v
+  name: jenkins-rc
 spec:
   replicas: 1
   selector:
@@ -14,12 +14,12 @@ spec:
       volumes:
       - name: jenkins-shared-data
         hostPath:
-           path: /home/ubuntu/jenkins_persistens
+           path: /jenkins
       containers:
       - name: jenkins-pod
-        image: jenkins
+        image: maha04056/myjenkins:1.1
         ports:
         - containerPort: 8080
         volumeMounts:
         - name: jenkins-shared-data
-          mountPath: /var/jenkins_home
+          mountPath: /jenkins
