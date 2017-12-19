@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: Jfrog-rc
+spec:
+  replicas: 1
+  selector:
+    app: jfrog
+  template:
+    metadata:
+      labels:
+        app: jfrog
+    spec:
+      containers:
+      - name: jfrog-pod
+        image: dzaunerepos/jfrog-artifactory-pro
+        ports:
+        - containerPort: 8081
+        
