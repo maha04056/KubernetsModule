@@ -22,4 +22,4 @@ spec:
         - containerPort: 8080
         volumeMounts:
         - name: jenkins-shared-data
-          mountPath:  /var/jenkins_home jenkins
+          mountPath: /var/jenkins_home
