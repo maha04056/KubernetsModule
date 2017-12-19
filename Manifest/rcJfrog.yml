@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: jfrog-pod
-        image: dzaunerepos/jfrog-artifactory-pro
+        image: scandio/jfrog-artifactory
         ports:
         - containerPort: 8081
         
